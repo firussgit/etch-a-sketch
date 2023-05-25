@@ -42,7 +42,7 @@ function initGrid(size) {
 function mouseIsOver(e) {
     if (isDrawing) {
         if (eraser.classList.contains("active")) {
-            e.target.style.backgroundColor = "white"
+            e.target.style.backgroundColor = "#e1e1e1"
         } else {
             e.target.style.backgroundColor = "black"
         }
@@ -53,7 +53,7 @@ function mouseIsOver(e) {
 function mouseIsDown(e) {
     isDrawing = true
     if (eraser.classList.contains("active")) {
-        e.target.style.backgroundColor = "white"
+        e.target.style.backgroundColor = "#e1e1e1"
     } else {
         e.target.style.backgroundColor = "black"
     }
