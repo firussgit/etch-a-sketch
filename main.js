@@ -3,6 +3,7 @@ const screen = document.querySelector(".screen")
 const eraser = document.querySelector(".eraser")
 const clear = document.querySelector(".clear")
 const sizeSlider = document.querySelector("#sizeSlider")
+const modeText = document.querySelector(".info h2 span")
 
 let currentSize = sizeSlider.value
 
@@ -73,6 +74,11 @@ sizeSlider.addEventListener("input", () => {
 // Event listener for eraser and clear button
 eraser.addEventListener("click", () => {
     eraser.classList.toggle("active")
+    if (eraser.classList.contains("active")) {
+        modeText.textContent = "Erase"
+    } else {
+        modeText.textContent = "Draw"
+    }
 })
 
 clear.addEventListener("click", clearGrid)
